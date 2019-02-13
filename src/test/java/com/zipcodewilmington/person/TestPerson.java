@@ -15,6 +15,9 @@ public class TestPerson {
 
         // When
         Person person = new Person();
+        person.setAge(expectedAge);
+        person.setName(expectedName);
+
 
         // Then
         String actualName = person.getName();
@@ -94,5 +97,85 @@ public class TestPerson {
         // Then
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
+
+    }
+
+
+
+    @Test
+    public void testgetHeight(){
+        //given
+        Person person = new Person();
+        Integer expected = 6;
+        //when
+        person.setHeightInFeet(6);
+        //then
+        Integer actual = person.getHeightInFeet();
+        Assert.assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void testsetHeight(){
+        //given
+        Person person = new Person();
+        Integer expected = 6;
+        //when
+        person.setHeightInFeet(6);
+        //then
+        Integer actual = person.getHeightInFeet();
+        Assert.assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void  test_setEyeColor(){
+
+        //given
+        Person person = new Person();
+        String expected = "Green";
+        //when
+        person.setEyeColor(expected);
+        //then
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected,actual);
+
+    }
+    @Test
+    public void test_setHairColor(){
+        //given
+        Person person = new Person();
+        String expected= "brown";
+        //when
+        person.setHairColor(expected);
+        //then
+        String actual = person.getHairColor();
+        Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void test_setHasInny(){
+        //given
+        Person person = new Person();
+        Boolean expected = false;
+        //when
+        person.setHasInny(expected);
+        //then
+        Boolean actual = person.getHasInny();
+        Assert.assertFalse(actual);
+    }
+
+    @Test
+    public void test_setWeightInLbs(){
+        //give
+        Person person = new Person();
+        Double expected = 160.00;
+        //when
+        person.setWeightinLbs(expected);
+        //then
+        Double actual = person.getWeightinLbs();
+
+
+
+        Assert.assertEquals(expected,actual,0.01);
     }
 }
